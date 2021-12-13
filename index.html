@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css" type="text/css">
+  <title>It's Party Time</title>
+<script>
+//Function to clear the original data from the Name value input, will not erase user input text
+  function clearName() {
+    if (document.getElementById('nameField').value == 'First and Last Name') {
+      document.getElementById('nameField').value = '';
+    }
+  }
+//Function to clear the original data from the Phone value input, will not erase user input text
+  function clearPhone() {
+    if (document.getElementById('rsvpField').value == 'I am in!') {
+      document.getElementById('rsvpField').value = '';
+    }
+  }
+//Function to bring back original text if name field is empty
+  function resetName() {
+    if (document.getElementById('nameField').value == '') {
+      document.getElementById('nameField').value = 'First and Last Name';
+    }
+  }
+  function resetRsvp() {
+    if (document.getElementById('rsvpField').value == '') {
+      document.getElementById('rsvpField').value = 'I am in!';
+    }
+  }
+  </script>
+
+
+</head>
+
+<body>
+<header>
+	<div class="contentWrapper">
+		<div id="fronionLogo">
+		    <center>
+			<img src= "https://www.creativefabrica.com/wp-content/uploads/2019/05/Youre-invited-580x386.jpg">
+			</center>
+		</div>
+	</div>
+</header>
+<main role="main">
+	<div class="contentWrapper">
+		<form action="" method="post" name="signUpForm" id="signUpForm">
+			<fieldset id="signUp">
+				<legend>Sign Up For Text Alerts</legend>
+
+					<label for="nameField">Name:</label>
+					<input id="nameField" name="nameField" type="text" class="textfield" value="First and Last Name" onFocus="clearName();" onBlur="resetName();">
+
+					<label for="rsvpField">RSVP:</label>
+					<input id="rsvpField" name="rsvpField" type="text" class="textfield" value="I am in!" onFocus="clearRsvp();" onBlur="resetRsvp();">
+
+					<input id="submit" type="submit" name="submit" value="Sign Me Up!">
+
+			</fieldset>
+		</form>
+	</div>
+</main>
+<footer>
+	<div class="contentWrapper">Copyright Invitation - All Rights Reserved</div>
+</footer>
+</body>
+</html>
